@@ -228,7 +228,11 @@ body {
     transform: translateY(-50%);
     max-width: 50%;
     color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    z-index: 10; /* Biar di atas gambar */
+}
+
+.carousel-item img {
+  pointer-events: none; /* Biar gambar nggak blok interaksi */
 }
 
 .custom-caption h2 {
