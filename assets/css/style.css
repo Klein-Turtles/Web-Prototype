@@ -220,15 +220,16 @@ body {
 }
 
 .custom-caption {
-    text-align: left;
-    left: 10%;
-    right: auto;
-    bottom: auto;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 50%;
-    color: white;
-    z-index: 10; /* Biar di atas gambar */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%); /* Pusat tengah */
+  text-align: center;
+  color: white;
+  z-index: 10; /* Biar di atas gambar */
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 80%;
 }
 
 .carousel-item img {
