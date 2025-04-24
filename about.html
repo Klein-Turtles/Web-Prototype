@@ -3,203 +3,374 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SolarSphere - Solusi Energi Surya</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <style>
-        /* Gaya kustom */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-        }
-        
-        .navbar-brand span {
-            font-weight: bold;
-            font-size: 1.5rem;
-            margin-left: 5px;
-        }
-        
-        .contact-btn {
-            background-color: #8BC34A;
-            color: white;
-            border-radius: 5px;
-            padding: 8px 16px;
-            border: none;
-            transition: all 0.3s;
-        }
-        
-        .contact-btn:hover {
-            background-color: #7CB342;
-            transform: translateY(-2px);
-        }
-        
-        .hero-section {
-            position: relative;
-            height: 600px;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-        
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 5%;
-            color: white;
-            border-radius: 16px;
-            border-radius: 10px;
-        }
-        
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.2rem;
-            max-width: 500px;
-            margin-bottom: 2rem;
-        }
-        
-        .clients-badge {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background-color: white;
-            padding: 10px 15px;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .clients-avatars {
-            display: flex;
-            margin-right: 10px;
-        }
-        
-        .client-avatar {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            border: 2px solid white;
-            margin-right: -10px;
-        }
-        
-        .nav-scroll {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background-color: #8BC34A;
-            width: 45px;
-            height: 45px;
-            border-radius: 4px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .nav-scroll:hover {
-            background-color: #7CB342;
-        }
-    </style>
-</head>
-<body>
-    <div class="container mt-3">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" fill="#8BC34A" />
-                        <path d="M30 50 L50 30 L70 50 L50 70 L30 50" stroke="white" stroke-width="5" fill="none" />
-                        <circle cx="50" cy="50" r="10" fill="white" />
-                    </svg>
-                    <span>SolarSphere</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                    <button class="contact-btn">Contact us <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                    </svg></button>
-                </div>
-            </div>
-        </nav>
+    <title>Tentang Kami</title>
 
-        <!-- Hero Section -->
-        <div class="hero-section mt-4">
-            <img src="assets/img/page-3.jpg" alt="Solar Panel Field" class="hero-image">
-            <div class="hero-overlay">
-                <h1 class="hero-title">Solar Energy Solution</h1>
-                <p class="hero-subtitle">Renewable and sustainable energy sources for a better quality life & the greener future.</p>
-                <div style="max-width: 200px;">
-                    <button class="contact-btn w-100 py-2">Contact us <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                    </svg></button>
+    <link href="assets/img/logo.png" rel="logo-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+    .stats {
+        background: url('assets/img/lassercut.jpg') center center / cover no-repeat;
+        padding: 200px 0;
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-align: center;
+        margin-top: -80px
+    }
+
+    .vision-section {
+        background: linear-gradient( rgba(11, 39, 59, 0.5),  rgba(11, 39, 59, 0.5)), url('assets/img/iot-monitoring.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        flex: 1;
+        padding: 200px 2rem;
+        text-align: center;
+    }
+    .mission-section {
+        background: linear-gradient( rgba(11, 39, 59, 0.5),  rgba(11, 39, 59, 0.5)), url('assets/img/lassercut.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        flex: 1;
+        padding: 200px 2rem;
+        text-align: center;
+    }
+
+    </style>   
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+    <div class="container px-3">
+      <!-- Logo -->
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/logo.png" class="img-fluid" alt="">
+      </a>
+      <!-- <a class="navbar-brand" href="index.html">Spektrum Teknologi</a> -->
+
+      <!-- Mobile Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Content - Centered -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" style="color: #28a745;">Home</a>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Services<i class="bi bi-chevron-down ms-1 opacity-75"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="services-intOfTings.html">Internet of Things</a></li>
+              <li><a class="dropdown-item" href="services-indAutCont.html">Industrial Automatic Control</a></li>
+              <li><a class="dropdown-item" href="services-robotics.html">Robotics</a></li>
+              <li><a class="dropdown-item" href="services-3DPrint.html">3D Printing</a></li>
+              <li><a class="dropdown-item" href="services-renewEnegry.html">Renewable Energy</a></li>
+              <li><a class="dropdown-item" href="services-lasserCut.html">Lasser Cutting</a></li>
+              <li><a class="dropdown-item" href="services-pelatihan.html">IoT Training</a></li>
+              <li><a class="dropdown-item" href="services-pelatihan.html">Tech Farm <span
+                    class="badge-new">New</span></a></li>
+              <li><a class="dropdown-item" href="services-selengkapnya.html">Selengkapnya</a></li>
+            </ul>
+          </li>
+
+          <!-- Products Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Products
+              <i class="bi bi-chevron-down ms-1 opacity-75"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="product-electronicSensor.html">Elektronika & Sensor</a></li>
+              <li><a class="dropdown-item" href="product-iotAutomatic.html">IoT & Otomasi</a></li>
+              <li><a class="dropdown-item" href="product-industry.html">Perangkat Industri</a></li>
+              <li><a class="dropdown-item" href="product-renewIndustry.html">Energi Terbarukan</a></li>
+              <li><a class="dropdown-item" href="product-educationAccessory.html">Edukasi & Aksesoris <span
+                    class="badge-new">New</span></a></li>
+              <li><a class="dropdown-item" href="product-selengkapnya.html">Selengkapnya</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portofolio.html">Portofolio</a>
+          </li>
+        </ul>
+
+        <!-- Contact Button -->
+        <a href="contact.html" class="contact-btn ms-lg-3 d-none d-lg-inline-block">Hubungi Kami</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+        <section class="about-hero">
+            <!-- Dark gradient overlay for better text contrast -->
+            <div class="bg-image" style="background-image: url('assets/img/about.jpg'); background-size: cover; background-position: center; height: 50vh;">
+            <div class="about-overlay"></div>
+            
+            <!-- Content container -->
+            <div class="container about-content d-flex flex-column justify-content-center align-items-start">
+                <h1 class="display-4 about-title">About Us</h1>
+            </div>
+        </section>
+
+
+    <!-- Our vision & Mission -->
+    <div class="vision-mission">
+        <div class="vision-section">
+            <h5>Visi Kami</h5>
+            <p>Tumbuh menjadi perusahaan yang sehat, terhormat, inovatif, dan kreatif di setiap bidang usahanya.</p>
+        </div>
+        <div class="mission-section">
+            <h5>Misi Kami</h5>
+            <p>Memberikan solusi dan layanan berkualitas terbaik bagi customer, menciptakan teknologi dengan kepedulian terhadap lingkungan dan sosial, serta memberikan keuntungan yang bermanfaat bagi perusahaan, customer, dan stakeholder. </p>
+        </div>
+    </div>
+
+    <!-- Floating Card Section (Koleksi) -->
+    <div class="card-floating">
+        <h5 class="mb-4">LAYANAN PENGADAAN & JASA</h5>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="icon-service">
+                    <i class="fas fa-box"></i>
+                    <p>Pengadaan</p>
+                    <div class="service-list">
+                        <ul>
+                            <li>Perdagangan besar dalam negeri</li>
+                            <li>Agen, grosir, distributor, suplier</li>
+                            <li>Perwakilan perusahaan dalam/luar negeri</li>
+                            <li>Perdagangan eceran</li>
+                            <li>Perdagangan komputer & elektronika</li>
+                            <li>Perdagangan alat telekomunikasi</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Clients Badge -->
-            <div class="clients-badge">
-                <div class="clients-avatars">
-                    <img src="/api/placeholder/30/30" alt="Client 1" class="client-avatar">
-                    <img src="/api/placeholder/30/30" alt="Client 2" class="client-avatar">
-                    <img src="/api/placeholder/30/30" alt="Client 3" class="client-avatar">
+            <div class="col-md-6 mb-3">
+                <div class="icon-service">
+                    <i class="fas fa-tools"></i>
+                    <p>Jasa</p>
+                    <div class="service-list">
+                        <ul>
+                            <li>Pembuatan alat elektronik</li>
+                            <li>Pelatihan bidang elektronika</li>
+                        </ul>
+                    </div>
                 </div>
-                <span style="font-weight: 600;">120K+ Satisfies & Happy Clients</span>
-            </div>
-            
-            <!-- Navigation Scroll Button -->
-            <div class="nav-scroll">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                </svg>
             </div>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Statistik Section -->
+    <div class="stats">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="stat-number">+6</h3>
+                    <p>Merek tepercaya selama lebih dari 6 tahun</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="stat-number">+1000</h3>
+                    <p>Melayani lebih dari 1.000 pelanggan</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="stat-number">+1000</h3>
+                    <p>Telah membuat costum barang lebih dari 1.000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="office-section">
+        <div class="container">
+            <div class="row">
+                <!-- Central Office -->
+                <div class="col-lg-6 mb-4">
+                    <div class="office-card">
+                        <h2>Central Office</h2>
+                        <div id="centralOfficeMap" class="office-map"></div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <strong>Telepon</strong>
+                                    082151150554
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <strong>Mobile</strong>
+                                    +62 85 655 655 813
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <strong>Email</strong>
+                                    spektrum.teknologi@gmail.com
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <strong>Alamat</strong>
+                                    Jl. Bantaran Indah Blok A No.14A, Kel. Tulusrejo, Kec. Lowokwaru, Kota Malang, Jawa Timur 65141
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Branch Office -->
+                <div class="col-lg-6 mb-4">
+                    <div class="office-card">
+                        <h2>Branch Office</h2>
+                        <div id="branchOfficeMap" class="office-map"></div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <strong>Telepon</strong>
+                                    082151150554
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <strong>Mobile</strong>
+                                    +62 85 655 655 813
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <strong>Email</strong>
+                                    info@myspektrum-teknologi.com
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <strong>Alamat</strong>
+                                    Jl. Letjend Soetoyo IV No.707, Lowokwaru, Kec. Lowokwaru, Kota Malang, Jawa Timur 65141
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Spektrum Teknologi adalah perusahaan teknologi yang fokus pada pengembangan solusi teknologi terintegrasi
+            untuk berbagai industri.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Shortcut</h3>
+            <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Services</a>
+            <a href="services.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Our Services</h3>
+            <div class="footer-links">
+            <a href="services-intOfTings.html">Internet of Things</a>
+            <a href="services-indAutCont.html">Industrial Automatic Control</a>
+            <a href="services-robotics.html">Robotics</a>
+            <a href="services-3DPrint.html">3D Printing</a>
+            <a href="services-selengkapnya.html">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Contacts</h3>
+            <div class="footer-contact text-white">
+            <div class="d-flex align-items-start mb-2">
+                <i class="fas fa-map-marker-alt me-2 text-success mt-1"></i>
+                <span>JL.Bantaran Indah Blk. A No.14A, Kel. Tulusrejo, Kec. Lowokwaru, Kota Malang, Jawa Timur 65141</span>
+            </div>
+            <div class="d-flex align-items-start mb-2">
+                <i class="fas fa-phone me-2 text-success mt-1"></i>
+                <span>085730220374</span>
+            </div>
+            <div class="d-flex align-items-start">
+                <i class="fas fa-envelope me-2 text-success mt-1"></i>
+                <span>spektrum.teknologi@gmail.com</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Bagian Google Maps
+    <div id="map"></div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Spektrum Teknologi. All Rights Reserved.</p>
+    </div> -->
+
+  </footer>
+
+  <!-- Load Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+  <!-- Whatsapp Button -->
+  <a href="https://wa.me/085730220374" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- BootStrap 5 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- bootstrap icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
 </body>
 </html>

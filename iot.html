@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perusahaan Teknologi</title>
+
+  <link href="assets/img/logo.png" rel="logo-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/productstyle.css">
+
+  <style>
+    .carousel-container{
+      height: 300px;
+      position: relative; /* Agar posisi absolut di dalamnya bekerja */
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-caption {
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: auto;   
+    }
+
+    .carousel-caption {
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Memastikan teks di tengah container */
+      bottom: auto;
+      color: white; /* Warna teks putih agar kontras dengan gambar gelap */
+      text-align: right;
+   }
+
+    .custom-caption h2 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm " >
+    <div class="container px-3">
+      <!-- Logo -->
+      <a href="index.html" class="logo d-flex align-items-center me-auto ">
+        <img src="assets/img/logo.png" class="img-fluid" alt="">
+      </a>
+      <!-- <a class="navbar-brand" href="index.html">Spektrum Teknologi</a> -->
+
+      <!-- Mobile Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Content - Centered -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" style="color: #28a745;">Home</a>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Services<i class="bi bi-chevron-down ms-1 opacity-75"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="services-intOfTings.html">Internet of Things</a></li>
+              <li><a class="dropdown-item" href="services-indAutCont.html">Industrial Automatic Control</a></li>
+              <li><a class="dropdown-item" href="services-robotics.html">Robotics</a></li>
+              <li><a class="dropdown-item" href="services-3DPrint.html">3D Printing</a></li>
+              <li><a class="dropdown-item" href="services-renewEnegry.html">Renewable Energy</a></li>
+              <li><a class="dropdown-item" href="services-lasserCut.html">Lasser Cutting</a></li>
+              <li><a class="dropdown-item" href="services-pelatihan.html">IoT Training</a></li>
+              <li><a class="dropdown-item" href="services-pelatihan.html">Tech Farm <span
+                    class="badge-new">New</span></a></li>
+              <li><a class="dropdown-item" href="services-selengkapnya.html">Selengkapnya</a></li>
+            </ul>
+          </li>
+
+          <!-- Products Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Products
+              <i class="bi bi-chevron-down ms-1 opacity-75"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="product-electronicSensor.html">Elektronika & Sensor</a></li>
+              <li><a class="dropdown-item" href="product-iotAutomatic.html">IoT & Otomasi</a></li>
+              <li><a class="dropdown-item" href="product-industry.html">Perangkat Industri</a></li>
+              <li><a class="dropdown-item" href="product-renewIndustry.html">Energi Terbarukan</a></li>
+              <li><a class="dropdown-item" href="product-educationAccessory.html">Edukasi & Aksesoris <span
+                    class="badge-new">New</span></a></li>
+              <li><a class="dropdown-item" href="product-selengkapnya.html">Selengkapnya</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portofolio.html">Portofolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us </a>
+          </li>
+        </ul>
+
+        <!-- Contact Button -->
+        <a href="contact.html" class="contact-btn ms-lg-3 d-none d-lg-inline-block">Hubungi Kami</a>
+      </div>
+    </div>
+  </nav>
+
+<section class="header-container bg-white">
+  <div class="container py-5">
+    <div class=" row align-items-center">
+      <div class="text-header col-md-6">
+        <h5 class="mb-3">Jasa Internet of Things</h5>
+        <h1 class="mb-3">Jasa Pembuatan Internet of <br> Things<span class="text-success">.</span></h1>
+        <p class="lead fw-bold">Jasa Pembuatan IoT untuk pemantauan secara <br> real-time dan pengumpulan data, dan pengendalian sistem secara efisien dari jarak jauh.</p>
+      </div>
+        <div class="class col-md-6 text-center">
+          <img src="assets/img/iot2.svg" alt="" class="img-fluid w-50">
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="description bg-light">
+  <div class="container py-5">
+    <div class="d-flex justify-content-center py-5">
+      <div class="desc-header py-5">
+        <h1 style="text-align: center;">Jasa Pembuatan IoT di Malang.</h1>
+        <p class="mb-3 mx-auto" style="max-width: 600px; text-align: center;">Kami adalah perusahaan yang menyediakan jasa pembuatan Internet of Things (IoT) di Malang.
+          Layanan kami mencakup pengembangan sistem IoT untuk pemantauan secara real-time, pengumpulan data otomatis, serta pengendalian perangkat dari jarak jauh secara efisien.
+          Dengan dukungan tim ahli dan teknologi terkini, kami membantu perusahaan, instansi, dan individu dalam mewujudkan sistem IoT yang andal, terintegrasi, dan mudah dioperasikan—baik untuk kebutuhan industri, riset, maupun proyek skala kecil hingga besar.</p>
+      </div>
+    </div>
+
+    <!-- Gambar dan Produk -->
+    <div class="container my-5">
+      <div class="row gy-4">
+        <!-- Item 1 -->
+        <div class="col-md-6">
+          <div class="d-flex align-items-start">
+            <div class="flex-shrink-0 me-3">
+              <img src="assets/img/robot_iot.svg" alt="" style="width: 64px; height: auto;">
+            </div>
+            <div>
+              <h5 class="product-title fw-semibold mb-1">IoT Robotik</h5>
+              <p class="mb-0"><strong>Jasa Pembuatan Alat Internet Of Things (IoT)</strong><br>
+                Monitoring Sensor Analog, Digital, 4–20mA untuk kebutuhan monitoring remote area, monitoring mesin pabrik dan kontrol mesin industri.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Item 2 -->
+        <div class="col-md-6">
+          <div class="d-flex align-items-start">
+            <div class="flex-shrink-0 me-3">
+              <img src="assets/img/iot_riset.svg" alt="" style="width: 64px; height: auto;">
+            </div>
+            <div>
+              <h5 class="product-title fw-semibold mb-1">IoT Alat Trainer</h5>
+              <p class="mb-0"><strong>Jasa Pembuatan Alat Internet Of Things (IoT)</strong><br>
+                untuk kebutuhan pembelajaran seperti trainer elektronika, trainer mikrokontroler dan trainer elektronika digital.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5 py-5">
+      <div class="row gy-4">
+        <!-- Item 1 -->
+        <div class="col-md-6">
+          <div class="d-flex align-items-start">
+            <div class="flex-shrink-0 me-3">
+              <img src="assets/img/robot_iot.svg" alt="" style="width: 64px; height: auto;">
+            </div>
+            <div>
+              <h5 class="product-title fw-semibold mb-1">IoT Robotik</h5>
+              <p class="mb-0"><strong>Jasa Pembuatan Alat Internet Of Things (IoT)</strong><br>
+                Monitoring Sensor Analog, Digital, 4–20mA untuk kebutuhan monitoring remote area, monitoring mesin pabrik dan kontrol mesin industri.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Item 2 -->
+        <div class="col-md-6">
+          <div class="d-flex align-items-start">
+            <div class="flex-shrink-0 me-3">
+              <img src="assets/img/iot_riset.svg" alt="" style="width: 64px; height: auto;">
+            </div>
+            <div>
+              <h5 class="product-title fw-semibold mb-1">IoT Alat Trainer</h5>
+              <p class="mb-0"><strong>Jasa Pembuatan Alat Internet Of Things (IoT)</strong><br>
+                untuk kebutuhan pembelajaran seperti trainer elektronika, trainer mikrokontroler dan trainer elektronika digital.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- stack -->
+<section class="hardware bg-white">
+  <!-- Hardware -->
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <!-- Kiri: Gambar -->
+      <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+        <img src="assets/img/iot-monitoring.jpg" alt="Perangkat IoT" class="img-fluid">
+      </div>
+  
+      <!-- Kanan: Konten -->
+      <div class="col-lg-6">
+        <p class="caption-stack fw-bold gap-3">Hardware</p>
+        <h2 class="fw-bold text-dark gap-2">Perangkat Internet Of Things (IoT)</h2>
+  
+        <p class="gap-3">
+          <strong>Jasa Pembuatan alat Internet Of Things</strong> mulai dari Perancangan Skematik, pembuatan layout PCB, pemilihan komponen elektronik, hingga perakitan dan pengujian perangkat IoT secara menyeluruh. Kami menyediakan layanan lengkap untuk kebutuhan prototipe maupun produksi massal, baik untuk aplikasi industri, pertanian, maupun smart home. Proses pengembangan dapat disesuaikan dengan spesifikasi dan kebutuhan klien, serta didukung oleh tim yang berpengalaman di bidang hardware dan embedded system.
+        </p>
+
+        <p>Spesifikasi Mikrokontroler yang bisa digunakan untuk Kontroler IoT adalah: </p>
+        
+  
+        <ul class="list-unstyled">
+          <li class="mb-4 d-flex align-items-center">
+            <i class="bi bi-check-circle-fill text-success me-2"></i> All Board Arduino
+          </li>
+          <li class="mb-4 d-flex align-items-center">
+            <i class="bi bi-check-circle-fill text-success me-2"></i> STM32 Microcontroller 32-bit
+          </li>
+          <li class="mb-4 d-flex align-items-center">
+            <i class="bi bi-check-circle-fill text-success me-2"></i> Raspberry Pi 2, 3 dan 4
+          </li>
+          <li class="mb-4 d-flex align-items-center">
+            <i class="bi bi-check-circle-fill text-success me-2"></i> BLE, LoRa, ESP8266, ESP32
+          </li>
+        </ul>
+        <div class="mt-4">
+          <a href="#hubungi" class="contact-btn btn-lg rounded-pill">Hubungi Sekarang!</a>
+        </div> 
+      </div>
+    </div>
+
+    <!-- Software -->
+
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <!-- Kiri: Konten -->
+        <div class="col-lg-6">
+          <p class="caption-stack fw-bold gap-3">Software</p>
+          <h2 class="fw-bold text-dark gap-2">Dashboard IoT (IoT)</h2>
+  
+          <p class="gap-3">
+            <strong>Jasa Pembuatan alat Internet Of Things</strong> mulai dari Perancangan Skematik, pembuatan layout PCB, pemilihan komponen elektronik, hingga perakitan dan pengujian perangkat IoT secara menyeluruh. Kami menyediakan layanan lengkap untuk kebutuhan prototipe maupun produksi massal, baik untuk aplikasi industri, pertanian, maupun smart home. Proses pengembangan dapat disesuaikan dengan spesifikasi dan kebutuhan klien, serta didukung oleh tim yang berpengalaman di bidang hardware dan embedded system.
+          </p>
+  
+          <p>Spesifikasi Mikrokontroler yang bisa digunakan untuk Kontroler IoT adalah: </p>
+  
+          <ul class="list-unstyled">
+            <li class="mb-4 d-flex align-items-center">
+              <i class="bi bi-check-circle-fill text-success me-2"></i> Full Customize Dashboard IoT
+            </li>
+            <li class="mb-4 d-flex align-items-center">
+              <i class="bi bi-check-circle-fill text-success me-2"></i> Influx DB
+            </li>
+            <li class="mb-4 d-flex align-items-center">
+              <i class="bi bi-check-circle-fill text-success me-2"></i> Thingsboard
+            </li>
+            <li class="mb-4 d-flex align-items-center">
+              <i class="bi bi-check-circle-fill text-success me-2"></i> Dashboard IoT Custom
+            </li>
+          </ul>
+  
+          <div class="mt-4">
+            <a href="#hubungi" class="contact-btn btn-lg rounded-pill">Hubungi Sekarang!</a>
+          </div> 
+        </div>
+  
+        <!-- Kanan: Gambar -->
+        <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+          <img src="assets/img/iot-monitoring.jpg" alt="Perangkat IoT" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section stack -->
+
+<section class="iot-stack">
+  <div class="container bg-light py-5">
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-4 text-center">
+          <h6>Platform Dashboard Internet Of Things yang kami gunakan:</h6>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center">
+      <!-- Logo 1 -->
+        <div class="col-md-4 col-lg-2 col-6 mb-4 d-flex justify-content-center">
+          <img src="assets/img/nasa.svg" alt="" style="width: 75px; height: auto;">
+        </div>
+        
+        <!-- Logo 2 -->
+        <div class="col-md-4 col-lg-2 col-6 mb-4 d-flex justify-content-center">
+          <img src="assets/img/jatimpark.svg" alt="" style="width: 75px; height: auto;">
+        </div>
+        
+        <!-- Logo 3 -->
+        <div class="col-md-4 col-lg-2 col-6 mb-4 d-flex justify-content-center">
+          <img src="assets/img/um.svg" alt="" style="width: 75px; height: auto;">
+        </div>
+        
+        <!-- Logo 4 -->
+        <div class="col-md-4 col-lg-2 col-6 mb-4 d-flex justify-content-center">
+          <img src="assets/img/indigospace.png" alt="" style="width: 75px; height: auto;">
+        </div>
+        
+        <!-- Logo 5 -->
+        <div class="col-md-4 col-lg-2 col-6 mb-4 d-flex justify-content-center">
+          <img src="assets/img/asjk.png" alt="" style="width: 75px; height: auto;">
+        </div>
+        
+        <!-- Logo 6 -->
+        <div class="col-md-4 col-lg-2 col-6 mb-4 d-flex justify-content-center">
+          <img src="assets/img/drt.png" alt="" style="width: 75px; height: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefit">
+  <div class="container py-3">
+    <div class="row align-items-center">
+      <!-- Kiri: Deskripsi Perusahaan -->
+      <div class="col-lg-6 mb-4 align-items-center">
+        <div class="section-title mb-3">
+          Keunggulan Perusahaan <br> Kami<span class="highlight">.</span>
+        </div>
+        <p>
+          Sayuswa Multi Teknologi adalah perusahaan internet of things, perusahaan elektronika dan teknologi di Indonesia yang mengerjakan layanan pembuatan alat elektronika custom untuk pembuatan sistem baru atau replace existing teknologi.
+        </p>
+      </div>
+
+      <!-- Kanan: Fitur Keunggulan -->
+      <div class="col-lg-6">
+        <div class="row ">
+          <div class="col-sm-6 mb-5 ">
+            <div class="icon mb-2 gap-2">💲</div>
+            <div class="feature-title">Experience</div>
+            <p>Pengalaman di bidang perancangan alat elektronika lebih dari 10 tahun.</p>
+          </div>
+          <div class="col-sm-6 mb-5">
+            <div class="icon mb-2">🧮</div>
+            <div class="feature-title">Strong R&D</div>
+            <p>Tim RnD kami yang solid dan kuat dan Ahli di bidangnya masing-masing.</p>
+          </div>
+          <div class="col-sm-6 mb-5">
+            <div class="icon mb-2">📚</div>
+            <div class="feature-title">Passion</div>
+            <p>Minat Kami adalah menyediakan teknologi yang total solutions.</p>
+          </div>
+          <div class="col-sm-6 mb-4">
+            <div class="icon mb-2">💳</div>
+            <div class="feature-title">Totallity</div>
+            <p>Totalitas dalam memberikan pelayanan kepada setiap client kami.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- yang dapat kami kerjakan -->
+
+<section class="ourservice py-5 bg-light">
+  <div class="container">
+    <!-- Judul Section -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Apa Saja Yang Bisa Kami <br> Kerjakan<span class="text-success">?.</span></h2>
+      <p class="text-muted">
+        Kami mengerjakan berbagai macam alat elektronika dan sistem untuk industri <br> dan perusahaan.
+      </p>
+    </div>
+
+    <!-- Konten Daftar -->
+    <div class="row justify-content-center">
+      <!-- Kolom Kiri -->
+      <div class="servicecolumn col-md-5 mb-4 fixed-width-column">
+        <div class="p-4 bg-white shadow-sm rounded equal-height">
+          <div class="equal-height-inner">
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                ✅ Sistem Monitoring Temperature Berbasis Telegram
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Monitoring KWH meter Listrik Dengan Komunikasi GSM dan WiFi
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Monitoring Ke Keruhan Air pada Distribusi Air PDAM.
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Alat Penghitung Hasil Produksi, Counting System Sensor.
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Andon Monitoring System
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Slope Stability Monitoring
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Monitoring Gas Monoksida, Karbon Dioksida dll.
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Undulating Monitoring System Untuk Tambang.
+                <hr>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan -->
+      <div class="servicecolumn col-md-5 mb-4 fixed-width-column">
+        <div class="p-4 bg-white shadow-sm rounded equal-height">
+          <div class="equal-height-inner">
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                ✅ Alat Internet Of Things Menggunakan GSM
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Alat Internet Of Things (IoT) Menggunakan WiFi ESP8266 <br> atau ESP32
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Monitoring Ke Keruhan Air pada Distribusi Air PDAM.
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Alat Penghitung Hasil Produksi, Counting System Sensor.
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Andon Monitoring System
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Slope Stability Monitoring
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Monitoring Gas Monoksida, Karbon Dioksida dll.
+                <hr>
+              </li>
+              <li class="mb-3">
+                ✅ Undulating Monitoring System Untuk Tambang.
+                <hr>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portofolio">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="fs-1">Portofolio Project IoT</h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Spektrum Teknologi adalah perusahaan teknologi yang fokus pada pengembangan solusi teknologi terintegrasi
+          untuk berbagai industri.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Shortcut</h3>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="products.html">Services</a>
+          <a href="services.html">Products</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Our Services</h3>
+        <div class="footer-links">
+          <a href="services-intOfTings.html">Internet of Things</a>
+          <a href="services-indAutCont.html">Industrial Automatic Control</a>
+          <a href="services-robotics.html">Robotics</a>
+          <a href="services-3DPrint.html">3D Printing</a>
+          <a href="services-selengkapnya.html">Selengkapnya</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Contacts</h3>
+        <div class="footer-contact text-white">
+          <div class="d-flex align-items-start mb-2">
+            <i class="fas fa-map-marker-alt me-2 text-success mt-1"></i>
+            <span>JL.Bantaran Indah Blk. A No.14A, Kel. Tulusrejo, Kec. Lowokwaru, Kota Malang, Jawa Timur 65141</span>
+          </div>
+          <div class="d-flex align-items-start mb-2">
+            <i class="fas fa-phone me-2 text-success mt-1"></i>
+            <span>085730220374</span>
+          </div>
+          <div class="d-flex align-items-start">
+            <i class="fas fa-envelope me-2 text-success mt-1"></i>
+            <span>spektrum.teknologi@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Bagian Google Maps
+  <div id="map"></div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2025 Spektrum Teknologi. All Rights Reserved.</p>
+  </div> -->
+
+</footer>
+
+   <!-- Load Google Maps API -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+   <!-- Whatsapp Button -->
+   <a href="https://wa.me/085730220374" class="whatsapp-btn">
+     <i class="fab fa-whatsapp"></i>
+   </a>
+ 
+   <!-- Main JS File -->
+   <script src="assets/js/main.js"></script>
+ 
+   <!-- BootStrap 5 CDN -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+     crossorigin="anonymous"></script>
+ 
+   <!-- bootstrap icons -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+ 
+ </body>
+
+
+ 
+ </html>

@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f8f9fa;
+  }
+  
+  .logo img {
+    max-width: 120px;
+    height: auto;
+  }
+  
+  /* Top bar styles */
+  .top-bar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .top-bar a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  /* Logo styles */
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28a745 !important;
+  }
+  
+  /* Center the navbar items */
+  .navbar-nav {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Navigation links */
+  .navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    padding: 10px 15px;
+    transition: color 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #28a745;
+  }
+  
+  /* Underline effect for nav links */
+  .navbar-nav .nav-link::before,
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #28a745;
+    transition: width 0.3s;
+    left: 0;
+  }
+  
+  .navbar-nav .nav-link::before {
+    bottom: 0;
+  }
+  
+  .navbar-nav .nav-link::after {
+    display: none;
+  }
+  
+  .navbar-nav .nav-link:hover::before,
+  .navbar-nav .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Dropdown styling */
+  .dropdown-menu {
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    padding: 10px 0;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.3s;
+    margin-top: 0;
+    text-align: left;
+    /* Center dropdown text */
+  }
+  
+  /* Hover dropdown effect */
+  .dropdown:hover>.dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .dropdown-item {
+    padding: 10px 20px;
+    transition: all 0.3s;
+    position: relative;
+  }
+  
+  /* Green hover effect for dropdown items */
+  .dropdown-item:hover {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  /* Underline effect for dropdown items */
+  .dropdown-item::after {
+    /* content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #28a745;
+    bottom: 5px;
+    left: 50%; */
+    /* transform: translateX(-50%); */
+    transition: width 0.3s;
+  }
+  
+  .dropdown-item:hover::after {
+    width: 100%;
+    background-color: #28a745;
+  }
+  
+  .dropdown-toggle::after {
+    font-size: 10px;
+    position: relative;
+    top: -2px;
+  }
+  
+  /* Contact button */
+  .contact-btn {
+    background-color: #28a745;
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Badge styling */
+  .badge-new {
+    background-color: #28a745;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .dropdown-item:hover .badge-new{
+    background-color: white;
+    color: #28a745;
+  }
+  
+  /* Handle mobile devices - use click for mobile */
+  /* DESKTOP - Hover */
+  @media (min-width: 992px) {
+    .dropdown-menu {
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all 0.3s ease;
+    }
+  
+    .dropdown:hover .dropdown-menu {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* MOBILE - Click (class .show ditambahkan oleh JS) */
+  @media (max-width: 991.98px) {
+    .dropdown-menu {
+      display: none;
+      background-color: white;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 0;
+      padding: 10px 0;
+      transition: all 0.3s ease;
+      opacity: 0;
+    }
+  
+    .dropdown-menu.show {
+      display: block;
+      opacity: 1;
+    }
+  
+    .dropdown-toggle::after {
+      display: none;
+      /* Hilangkan panah default kalau mau ganti pakai ikon lain */
+    }
+  
+    .dropdown-item {
+      padding: 12px 20px;
+      text-align: left;
+      color: #333;
+    }
+  
+    .dropdown-item:hover {
+      background-color: #f8f8f8;
+      color: #28a745;
+    }
+  }
+
+
+  /*========= CSS for IOT Pages
+============================= */
+
+
+/* Header */
+
+.text-header h5{
+    color: #28a745;
+    font-size: 20px;
+    font-style: bold;
+  }
+  
+  .text-header p{
+    font-size: 20px;
+    color: black;
+  }
+  
+  .text-header h1{
+    color: #0b273c;
+  }
+  
+  .desc-header h1{
+    color: #0b273c;
+  }
+  
+  .product-title:hover{
+    color: #28a745;
+    transition: color 0.3s ease;
+  }
+
+
+
+  /* stack */
+.contact-btn {
+    background-color: #28a745;
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  .contact-btn:hover {
+    background-color: #218838;
+  }
+
+  .caption-stack{
+    color: #28a745;
+    font-size: 25px;
+  }
+
+
+  /* Whatsapp button */
+
+  /* Whatsapp Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: transform 0.3s;
+    text-decoration: none;
+  }
+  
+  .whatsapp-btn:hover {
+    transform: scale(1.1);
+  }
+
+  
+  /* benefit */
+
+  section.benefit {
+    background-color: #0b273c;
+    color: white;
+    padding: 4rem 0;
+  }
+  .highlight {
+    color: #2ecc71;
+  }
+  .icon {
+    font-size: 1.5rem;
+    color: #2ecc71;
+  }
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+
+  /* our service section */
+  
+  .servicecolumn .fixed-width-column {
+    max-width: 700px;
+    flex: 0 0 500px; /* Supaya tetap segitu terus ukurannya */
+  }
+
+
+  .equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .equal-height-inner {
+    flex: 1;
+  }
+
+  @media (max-width: 768px) {
+    .fixed-width-column {
+      flex: 0 0 100%; /* Full width kalau layar kecil */
+      max-width: 100%;
+    }
+  }
+  
+
+  
+  /* footer */
+
+  /* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 10% 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.footer-section {
+  flex-basis: 23%;
+  margin-bottom: 30px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #28a745;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-links a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #28a745;
+}
+
+.footer-contact span {
+  display: block;
+  margin-bottom: 10px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.footer-contact i {
+  margin-right: 10px;
+  color: #28a745;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+  color: #ccc;
+}
